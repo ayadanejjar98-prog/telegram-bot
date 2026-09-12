@@ -7,14 +7,14 @@ TOKEN = "8664429892:AAGl0JrDDtRf8YIoN-8cv_XKslDXot5HKLU"
 
 def convert_link(text):
     pattern = r"https?://\S+"
-    
     match = re.search(pattern, text)
+
     if not match:
         return None
-    
+
     original = match.group(0)
     encoded = urllib.parse.quote(original, safe='')
-    
+
     return f"https://www.facebook.com/l.php?u={encoded}"
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
