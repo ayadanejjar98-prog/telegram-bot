@@ -6,7 +6,7 @@ from telegram.ext import (
     ContextTypes, filters
 )
 
-BOT_TOKEN = "8664429892:AAGl0JrDDtRf8YIoN-8cv_XKslDXot5HKLU"
+BOT_TOKEN = "8907079439:AAHs86KWQdR3b9JKJu96JBUdG3pp--sCJWo"
 
 # Simple anti-spam: one conversion per user every 2 seconds
 last_request = {}
