@@ -43,13 +43,9 @@ async def convert_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     stats[user_id] = stats.get(user_id, 0) + 1
 
-    keyboard = [[
-        InlineKeyboardButton("📋 Copy / Open Link", url=facebook_link)
-    ]]
-
     await update.message.reply_text(
-        f"✅ Converted!\n\n{facebook_link}",
-        reply_markup=InlineKeyboardMarkup(keyboard)
+        f"✅ Converted!\n\n`{facebook_link}`",
+         parse_mode="Markdown"
     )
 
 async def my_stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
